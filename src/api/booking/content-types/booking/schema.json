@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "booking",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama_customer": {
+      "type": "string"
+    },
+    "hp_customer": {
+      "type": "string"
+    },
+    "tanggal": {
+      "type": "date"
+    },
+    "jam": {
+      "type": "enumeration",
+      "enum": [
+        "jam_10_00",
+        "jam_11_00",
+        "jam_12_00",
+        "jam_13_00",
+        "jam_14_00",
+        "jam_15_00",
+        "jam_16_00",
+        "jam_17_00",
+        "jam_18_00",
+        "jam_19_00",
+        "jam_20_00",
+        "jam_21_00",
+        "jam_22_00"
+      ]
+    },
+    "kapster": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kapster.kapster",
+      "inversedBy": "booking"
+    },
+    "layanan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::layanan.layanan",
+      "inversedBy": "booking"
+    }
+  }
+}

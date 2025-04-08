@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "layanans",
+  "info": {
+    "singularName": "layanan",
+    "pluralName": "layanans",
+    "displayName": "layanan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nalay": {
+      "type": "string"
+    },
+    "deskripsi": {
+      "type": "string"
+    },
+    "catatan": {
+      "type": "string"
+    },
+    "kethar": {
+      "type": "string"
+    },
+    "harga": {
+      "type": "biginteger"
+    },
+    "booking": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::booking.booking",
+      "mappedBy": "layanan"
+    }
+  }
+}

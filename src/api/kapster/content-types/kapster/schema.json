@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kapsters",
+  "info": {
+    "singularName": "kapster",
+    "pluralName": "kapsters",
+    "displayName": "kapster",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bio": {
+      "type": "blocks"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "booking": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::booking.booking",
+      "mappedBy": "kapster"
+    }
+  }
+}
