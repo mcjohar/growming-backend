@@ -1,0 +1,23 @@
+{
+  "collectionName": "kasirs",
+  "info": {
+    "name": "Kasir",
+    "singularName": "kasir",
+    "pluralName": "kasirs",
+    "displayName": "Kasir"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
+
